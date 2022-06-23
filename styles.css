@@ -1,0 +1,567 @@
+* {
+	font-family: 'Bebas Neue', cursive;
+	font-family: 'Outfit', sans-serif;
+	font-weight: bold;
+	touch-action: manipulation;
+}
+
+.h1 {
+	margin: 0;
+	font-size: calc(1rem + 4vw);
+	color: #233536;
+}
+
+button {
+	border: none;
+	border-radius: 3px;
+	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+		rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+		rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+button, select {
+	font-size: 1rem;
+	width: 90%;
+	height: 3rem;
+	margin: 5px;
+}
+
+html, body {
+	max-height: 100%;
+	max-width: 100%;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#image {
+	width: 100%;
+	max-height: fit-content;
+	border-radius: 50px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.bodyClass {
+	background-color: #9be8eb;
+	margin: 0;
+}
+
+.mainContainer {
+	background-color: #99c9d6;
+	min-width: 20rem;
+	width: 30%;
+	height: 80%;
+	border-radius: 50px;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: rgba(0, 0, 0, 0.56) 0px 70px 70px 4px;
+}
+
+.buttonContainer {
+	max-width: 100%;
+	max-height: 100%s;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	place-items: center;
+}
+
+/* buttons - normal mode */
+
+.darkModeButton {
+	cursor: pointer;
+	position: relative;
+	color: #233536;
+	z-index: 1;
+	background-image: linear-gradient(
+		to right top,
+		#b4eeef,
+		#ace5ea,
+		#a5dbe4,
+		#9fd2de,
+		#99c8d8
+	);
+}
+
+.darkModeButton::before {
+	border: none;
+	border-radius: 3px;
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(
+		to left bottom,
+		#b4eeef,
+		#ace5ea,
+		#a5dbe4,
+		#9fd2de,
+		#99c8d8
+	);
+	z-index: -1;
+	transition: opacity 0.2s linear;
+	opacity: 0;
+}
+
+.darkModeButton:hover::before {
+	opacity: 1;
+}
+
+
+.langChangeButton {
+	cursor: pointer;
+	position: relative;
+	color: #233536;
+	z-index: 1;
+	background-image: linear-gradient(
+		to right top,
+		#b4eeef,
+		#ace5ea,
+		#a5dbe4,
+		#9fd2de,
+		#99c8d8
+	);
+}
+
+.langChangeButton::before {
+	border: none;
+	border-radius: 3px;
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	transition: opacity 0.2s linear;
+	opacity: 0;
+	background-image: linear-gradient(
+		to left bottom,
+		#b4eeef,
+		#ace5ea,
+		#a5dbe4,
+		#9fd2de,
+		#99c8d8
+	);
+}
+
+.langChangeButton:hover::before {
+	opacity: 1;
+}
+
+
+.playerOneButton {
+	cursor: pointer;
+	position: relative;
+	color: #233536;
+	z-index: 1;
+	background-image: linear-gradient(
+		to right top,
+		#b4eeef,
+		#ace5ea,
+		#a5dbe4,
+		#9fd2de,
+		#99c8d8
+	);
+}
+
+.playerOneButton::before {
+	border: none;
+	border-radius: 3px;
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	transition: opacity 0.2s linear;
+	opacity: 0;
+	background-image: linear-gradient(
+		to left bottom,
+		#b4eeef,
+		#ace5ea,
+		#a5dbe4,
+		#9fd2de,
+		#99c8d8
+	);
+}
+
+.playerOneButton:hover::before {
+	opacity: 1;
+}
+
+
+.playerTwoButton {
+	cursor: pointer;
+	position: relative;
+	color: #233536;
+	z-index: 1;
+	background-image: linear-gradient(
+		to right top,
+		#b4eeef,
+		#ace5ea,
+		#a5dbe4,
+		#9fd2de,
+		#99c8d8
+	);
+}
+
+.playerTwoButton::before {
+	border: none;
+	border-radius: 3px;
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	transition: opacity 0.2s linear;
+	opacity: 0;
+	background-image: linear-gradient(
+		to left bottom,
+		#b4eeef,
+		#ace5ea,
+		#a5dbe4,
+		#9fd2de,
+		#99c8d8
+	);
+}
+
+.playerTwoButton:hover::before {
+	opacity: 1;
+}
+
+
+.resetButton {
+	cursor: pointer;
+	position: relative;
+	color: #233536;
+	z-index: 1;
+	background-image: linear-gradient(
+		to right top,
+		#b4eeef,
+		#ace5ea,
+		#a5dbe4,
+		#9fd2de,
+		#99c8d8
+	);
+}
+
+.resetButton::before {
+	border: none;
+	border-radius: 3px;
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	transition: opacity 0.2s linear;
+	opacity: 0;
+	background-image: linear-gradient(
+		to left bottom,
+		#b4eeef,
+		#ace5ea,
+		#a5dbe4,
+		#9fd2de,
+		#99c8d8
+	);
+}
+
+.resetButton:hover::before {
+	opacity: 1;
+}
+
+.scoreSelect {
+	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+		rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+		rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+	border: none;
+	color: #233536;
+	cursor: pointer;
+	border-radius: 3px;
+	background-image: linear-gradient(
+		to right top,
+		#b4eeef,
+		#ace5ea,
+		#a5dbe4,
+		#9fd2de,
+		#99c8d8
+	);
+}
+
+.scoreSelect:hover {
+	border: none;
+	border-radius: 3px;
+}
+
+/* player buttons win/lose normal mode*/
+
+.playerOneButtonWin {
+	cursor: not-allowed;
+	color: #233536;
+	background-color: #00ad77;
+	transition: all 0.5s ease-in-out;
+}
+.playerOneButtonLose {
+	cursor: not-allowed;
+	color: #233536;
+	background-color: #f56666;
+	transition: all 0.5s ease-in-out;
+}
+
+.playerTwoButtonWin {
+	cursor: not-allowed;
+	color: #233536;
+	background-color: #00ad77;
+	transition: all 0.5s ease-in-out;
+}
+.playerTwoButtonLose {
+	cursor: not-allowed;
+	color: #233536;
+	background-color: #f56666;
+	transition: all 0.5s ease-in-out;
+}
+
+/* player score display win/lose normal mode */
+
+.playerOneScoreDisplay {
+	color: #233536;
+	transition: all 0.5s ease-in-out;
+}
+.playerOneScoreDisplayLose {
+	color: #f56666;
+	transition: all 0.5s ease-in-out;
+}
+.playerOneScoreDisplayWin {
+	color: #00ad77;
+	transition: all 0.5s ease-in-out;
+}
+.playerTwoScoreDisplay {
+	color: #233536;
+	transition: all 0.5s ease-in-out;
+}
+.playerTwoScoreDisplayLose {
+	color: #f56666;
+	transition: all 0.5s ease-in-out;
+}
+.playerTwoScoreDisplayWin {
+	color: #00ad77;
+	transition: all 0.5s ease-in-out;
+}
+
+/* dark mode (no buttons) */
+
+.bodyClassDm {
+	background-color: #748484;
+	margin: 0;
+}
+
+.mainContainerDm {
+	background-color: #2b383c;
+	min-width: 20rem;
+	width: 30%;
+	height: 80%;
+	border-radius: 50px;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: rgba(0, 0, 0, 0.56) 0px 70px 70px 4px;
+}
+
+.h1Dm {
+	margin: 0;
+	font-size: calc(1rem + 4vw);
+	color: #b6bcbd;
+}
+
+.playerOneScoreDisplayDm {
+	color: #b6bcbd;
+	transition: all 0.5s ease-in-out;
+}
+
+.playerTwoScoreDisplayDm {
+	color: #b6bcbd;
+	transition: all 0.5s ease-in-out;
+}
+
+/* dark mode buttons */
+
+.darkModeButtonDm {
+	cursor: pointer;
+	position: relative;
+	color: #b6bcbd;
+	z-index: 1;
+	background-image: linear-gradient(to right top, #748484, #677676, #596969, #4d5c5c, #404f4f);
+}
+
+.darkModeButtonDm::before {
+	border: none;
+	border-radius: 3px;
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to left bottom, #748484, #677676, #596969, #4d5c5c, #404f4f);
+	z-index: -1;
+	transition: opacity 0.2s linear;
+	opacity: 0;
+}
+
+.darkModeButtonDm:hover::before {
+	opacity: 1;
+}
+
+
+.langChangeButtonDm {
+	cursor: pointer;
+	position: relative;
+	color: #b6bcbd;
+	z-index: 1;
+	background-image: linear-gradient(to right top, #748484, #677676, #596969, #4d5c5c, #404f4f);
+}
+
+.langChangeButtonDm::before {
+	border: none;
+	border-radius: 3px;
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	transition: opacity 0.2s linear;
+	opacity: 0;
+	background-image: linear-gradient(to left bottom, #748484, #677676, #596969, #4d5c5c, #404f4f);
+}
+
+.langChangeButtonDm:hover::before {
+	opacity: 1;
+}
+
+
+.playerOneButtonDm {
+	cursor: pointer;
+	position: relative;
+	color: #b6bcbd;
+	z-index: 1;
+	background-image: linear-gradient(to right top, #748484, #677676, #596969, #4d5c5c, #404f4f);
+}
+
+.playerOneButtonDm::before {
+	border: none;
+	border-radius: 3px;
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	transition: opacity 0.2s linear;
+	opacity: 0;
+	background-image: linear-gradient(to left bottom, #748484, #677676, #596969, #4d5c5c, #404f4f);
+}
+
+.playerOneButtonDm:hover::before {
+	opacity: 1;
+}
+
+
+.playerTwoButtonDm {
+	cursor: pointer;
+	position: relative;
+	color: #b6bcbd;
+	z-index: 1;
+	background-image: linear-gradient(to right top, #748484, #677676, #596969, #4d5c5c, #404f4f);
+}
+
+.playerTwoButtonDm::before {
+	border: none;
+	border-radius: 3px;
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	transition: opacity 0.2s linear;
+	opacity: 0;
+	background-image: linear-gradient(to left bottom, #748484, #677676, #596969, #4d5c5c, #404f4f);
+}
+
+.playerTwoButtonDm:hover::before {
+	opacity: 1;
+}
+
+
+.resetButtonDm {
+	cursor: pointer;
+	position: relative;
+	color: #b6bcbd;
+	z-index: 1;
+	background-image: linear-gradient(to right top, #748484, #677676, #596969, #4d5c5c, #404f4f);
+}
+
+.resetButtonDm::before {
+	border: none;
+	border-radius: 3px;
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	transition: opacity 0.2s linear;
+	opacity: 0;
+	background-image: linear-gradient(to left bottom, #748484, #677676, #596969, #4d5c5c, #404f4f);
+}
+
+.resetButtonDm:hover::before {
+	opacity: 1;
+}
+
+.scoreSelectDm {
+	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+		rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+		rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+	border: none;
+	color: #b6bcbd;
+	cursor: pointer;
+	border-radius: 3px;
+	background-image: linear-gradient(to right top, #748484, #677676, #596969, #4d5c5c, #404f4f);
+}
+
+.scoreSelectDm:hover {
+	border: none;
+	border-radius: 3px;
+}
+
+@media (max-width: 500px) {
+	.main-container {
+		min-width: 85%;
+	}
+	h1, .h1, .h1Dm {
+		font-size: 3rem;
+	}
+}

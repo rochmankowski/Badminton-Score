@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, maximum-scale=1.0, user-scalable=no"/>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600&display=swap"
+			rel="stylesheet"/>
+		<title>🏸 Badminton Score 🏸</title>
+	</head>
+
+	<body class="bodyClass">
+		<div class="mainContainer">
+			<img
+				id="image"
+				src="badminton-photo.jpg"
+				alt="Badminton"/>
+			<h1 class="h1">
+				<span class="playerOneScoreDisplay" id="playerOneScoreDisplay">0</span>
+				<span class="scoreboard" id="scoreboard">TO</span>
+				<span class="playerTwoScoreDisplay" id="playerTwoScoreDisplay">0</span>
+			</h1>
+			<div class="buttonContainer">
+				<button class="playerOneButton" id="playerOneButton">+1 PLAYER ONE</button>
+				<button class="resetButton" id="resetButton">RESET</button>
+				<button class="playerTwoButton" id="playerTwoButton">+1 PLAYER TWO</button>
+				<button class="langChangeButton" id="langChangeButton">ENGLISH</button>
+				<select class="scoreSelect" id="winningScoreSelect">
+					<option value="11" id="shortSet">SHORT SET</option>
+					<option value="21" id="normalSet">NORMAL SET</option>
+				</select>
+				<button class="darkModeButton" id="darkModeButton">DARK MODE</button>
+			</div>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>
